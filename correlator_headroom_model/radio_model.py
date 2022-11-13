@@ -1,5 +1,5 @@
-from model import HeadroomModel, Scale, Limit
-from representation import ReprMixin
+from .model import HeadroomModel, Scale, Limit
+from .representation import ReprMixin
 
 
 class RIModel(ReprMixin, HeadroomModel):

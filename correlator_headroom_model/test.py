@@ -1,6 +1,6 @@
 import unittest
 
-from model import HeadroomModel, Scale, Limit
+from .model import HeadroomModel, Scale, Limit
 
 # cells, exception, R, values
 TESTS = [
