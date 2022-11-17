@@ -9,7 +9,7 @@ class Cell:
     DIFF_CHK = 1e-10
 
     def __init__(self, ratio=None, max=None, label=None):
-        assert ratio is not None or max is not None
+        assert sum([x is not None for x in [ratio, max]])==1
         max = None if max is not None and max < 0 else max
         self.ratio = ratio
         self.max = max
