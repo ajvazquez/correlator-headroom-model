@@ -87,6 +87,10 @@ class HeadroomModel:
             values.append(vin)
         self.values = values[::-1]
 
+        # Check
+        if any([x>=(Cell.DEFAULT_MAX-Cell.DIFF_CHK) for x in self.values]):
+            raise MaxException
+
     def cached_values(self, reload=False):
         if reload or not self.values:
             self._propagate_model()
