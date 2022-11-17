@@ -28,9 +28,20 @@ python -m unittest
 
 ## Examples
 
-### Headroom graph
+### Headroom graph: simple dashboard
 
 The provided implementation allows to plot the performance in all stages of the correlator model easily.
+This example shows a minimal dashboard with the headroom graph and sliders for the configurable parameters.
+```
+source venv/bin/activate
+voila `find -name dashboard.ipynb` --port 8889
+```
+Opening a browser on ```localhost:8889``` will display the following:
+![Headroom graph dashboard](img/dashboard.png)
+The graph will update following changes in the input sliders.
+
+### Headroom graph: generating plots
+
 The RIModel class allows to set all the parameters presented in the model, but provides some defaults for simplicity.
 
 ```
